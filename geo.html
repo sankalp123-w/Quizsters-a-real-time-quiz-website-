@@ -407,7 +407,7 @@ label .glyphicon {
 
       
         rnum =Math.floor((Math.random()*54)+1); //Getting Random Number
-        question.innerText="Q."+`${realData.results[rnum].question}`;
+        question.innerText="Q."+`${JSON.stringify(realData.results[rnum].question).replace(/[^a-zA-Z0-9quot]/g,' ')}`;
         var num=Math.floor((Math.random()*4)+1);
         var bno=num.toString();
         var btn1=document.getElementById(bno);
